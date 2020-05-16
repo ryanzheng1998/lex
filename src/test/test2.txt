@@ -1,0 +1,3 @@
+(a+b)*      <param>
+(a*bc)+ccd  <complex>
+a+(a*)d     <param2>

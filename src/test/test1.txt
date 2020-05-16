@@ -1,0 +1,5 @@
+a         <simple_token>
+b*        <kleene>
+cd        <concat>
+e+f       <alter>
+a*b+cd    <order>

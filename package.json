@@ -1,0 +1,24 @@
+{
+  "name": "lex",
+  "version": "1.0.0",
+  "description": "Lexical Analyzer Generator",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.dev.config.js && node dist/main.bundle.js",    
+    "play": "webpack --config webpack.dev.config.js && node dist/playground.bundle.js"
+  },
+  "keywords": ["lex", "flex", "scanner", "tokenizer", "compiler"],
+  "author":  "Ryan Zheng",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@types/ramda": "^0.27.4",
+    "ramda": "^0.27.0"
+  }
+}
