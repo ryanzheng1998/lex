@@ -1,30 +1,28 @@
 # Lexical Analyzer Generator
 
-> Using Javascript(Node.js) + Ramda.js to build a Lexical Analyzer Generator from scratch
+> 用 JavaScript（Node.js） + Ramda 實作 Lexical Analyzer Generator
 
-*You can also read this README in [Chinese](https://github.com/ryanzheng1998/Lex/blob/master/README.cn.md)!*
+## 開始使用它
 
-## Getting Started
-
-### Installing
+### 安裝
 
 ```bash
 npm install
 ```
 
-### Compile and Execute for development
+### 在開發環境中編譯並執行
 
 ```bash
 npm run build
 ```
 
-## Progress
+## 完成事項
 
 - [x] Regex -> Nondeterministic Finite Autometa（NFA）
 - [x] NFA -> Deterministic Finite Autometa（DFA）
 - [ ] DFA -> Optimized DFA
 - [ ] Optimized DFA -> Hash Table Array
 
-## License
+## 許可證
 
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -1,33 +1,17 @@
 import { pipe, map, split, test, reduce, head } from "ramda";
-import { ignoreUndefine } from "./lib";
+import { ignoreUndefine } from "../lib";
 import { infixToPostfix } from "./infixToPostfix";
+import { NFAArrow, NFAGraph } from "../types";
 
 /*
  * 透過 regex 建立 Nondeterministic Finite Autometa
  */
 
-interface arrow {
-    startNode: number;
-    endNode: number;
-    action: string;
-}
-
-const createArrow = (startNode: number, endNode: number, action: string): arrow => ({
+const createArrow = (startNode: number, endNode: number, action: string): NFAArrow => ({
     startNode: startNode,
     endNode: endNode,
     action: action,
 })
-
-
-// 用數字來命名 state，
-// 這樣的資料結構隱藏表示了以下的屬性
-// starting state = 0
-// terminal state = nodeCount - 1
-// state 的集合 = [0 .. nodeCount]
-interface NFAGraph {
-    graph: arrow[];
-    nodeCount: number;
-}
 
 
 interface Accumulater {
@@ -39,13 +23,13 @@ const initailState: Accumulater = {
 }
 
 // 可以用 evolve 做
-const addState = (inc: number) => map((arrow: arrow): arrow => ({
-    ...arrow,
-    startNode: arrow.startNode + inc,
-    endNode: arrow.endNode + inc, 
+const addState = (inc: number) => map((NFAArrow: NFAArrow): NFAArrow => ({
+    ...NFAArrow,
+    startNode: NFAArrow.startNode + inc,
+    endNode: NFAArrow.endNode + inc, 
 }))
 
-const createLambdaArrow = (x: number, y: number): arrow => createArrow(x, y, 'lambda')
+const createLambdaArrow = (x: number, y: number): NFAArrow => createArrow(x, y, 'lambda')
 
 const createNFAVocabulary = (action: string): NFAGraph => ({
     graph: [createArrow(0, 1, action)],

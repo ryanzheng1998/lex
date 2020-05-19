@@ -26,3 +26,4 @@ export const forcingArrayType = (x: any) => <Array<any>> x
 
 // 不做檢查 type 了
 export const stopGuardingTypeSafty = (x: any) => <any>x
+
