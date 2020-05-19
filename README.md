@@ -2,7 +2,7 @@
 
 > Using Javascript(Node.js) + Ramda.js to build a Lexical Analyzer Generator from scratch
 
-*You can also read this README in [Chinese](https://github.com/ryanzheng1998/Lex/blob/master/README.cn.md)!*
+*You can also read this README in [Chinese](https://github.com/ryanzheng1998/Lex/blob/master/README.tw.md)!*
 
 ## Getting Started
 
