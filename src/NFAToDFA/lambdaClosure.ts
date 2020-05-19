@@ -1,6 +1,5 @@
-import { NFAGraph, NFAArrow } from "../types";
-import { pickBy, map, propEq, filter, lensProp, view, difference, pipe, __, compose } from "ramda";
-import { stopGuardingTypeSafty } from "../lib";
+import { NFAArrow } from "../types";
+import { propEq, filter, lensProp, difference } from "ramda";
 import { reachableNode } from "./tsIgnore";
 
 /*

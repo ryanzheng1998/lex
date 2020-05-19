@@ -20,8 +20,7 @@ npm run build
 
 - [x] Regex -> Nondeterministic Finite Autometa（NFA）
 - [x] NFA -> Deterministic Finite Autometa（DFA）
-- [ ] DFA -> Optimized DFA
-- [ ] Optimized DFA -> Hash Table Array
+- [ ] DFA -> Optimized Transition Table
 
 ## 許可證
 

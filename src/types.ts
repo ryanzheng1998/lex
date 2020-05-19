@@ -1,5 +1,3 @@
-
-
 export interface NFAArrow {
     startNode: number;
     endNode: number;
